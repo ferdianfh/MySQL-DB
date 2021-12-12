@@ -131,10 +131,28 @@ WHERE price < 10000 OR stock < 20;
 SELECT * FROM tbl_products
 WHERE price > 20000 AND price < 100000;
 
+SELECT * FROM tbl_products
+WHERE price BETWEEN 20000 AND 25000;
+
+
+-- Mengubah Data pada Table tbl_products
+UPDATE tbl_products
+SET stock = 100
+WHERE id = 100;
+
 
 -- Menghapus Data Dari Table tbl_products
 DELETE FROM tbl_products
 WHERE id = 100;
+
+
+-- Mencari Data Tertentu Dari Table tbl_products
+SELECT * FROM tbl_products
+WHERE description LIKE 'Mi%';
+
+SELECT * FROM tbl_products
+WHERE name LIKE 'S%';
+
 
 -- Mengurutkan Data pada Table tbl_products
 SELECT * FROM tbl_products
@@ -142,3 +160,20 @@ ORDER BY price ASC;
 
 SELECT * FROM tbl_products
 ORDER BY stock DESC;
+
+SELECT id, name, price, stock FROM tbl_products
+ORDER BY price ASC;
+
+
+-- Membatasi Jumlah Data yang Ingin Ditampilkan Dari Table tbl_products
+SELECT * FROM tbl_products
+WHERE price < 25000
+ORDER BY id
+LIMIT 25;
+
+
+-- Men-skip Data yang ingin Ditampilkan
+SELECT * FROM tbl_products
+WHERE price < 25000
+ORDER BY id
+LIMIT 25 OFFSET 25;
