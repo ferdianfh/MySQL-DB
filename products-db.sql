@@ -1,5 +1,15 @@
 -- * CASE 1
 
+-- Membuat Database baru
+CREATE DATABASE toko_online;
+
+-- Menampilkan Semua Database
+SHOW DATABASES;
+
+-- Menggunakan/Masuk ke Database toko_online
+USE toko_online;
+
+
 -- Menampilkan Semua Tables di Database toko_online
 SHOW TABLES;
 
@@ -18,11 +28,9 @@ CREATE TABLE tbl_products
 DESC tbl_products;
 
 -- Memasukkan Data ke Dalam Table tbl_products
-INSERT INTO tbl_products(id, name, price, description, stock)
-VALUES (1, 'Sandal Xpert', 9000, 'Sandal Xpert Limited Edition', 2);
-
 INSERT INTO tbl_products(name, price, description, stock)
-VALUES ('Sorumi Soto', 3000, 'Mi Instan Rasa Soto Babat', 200),
+VALUES ('Sandal Xpert', 9000, 'Sandal Xpert Limited Edition', 2),
+        ('Sorumi Soto', 3000, 'Mi Instan Rasa Soto Babat', 200),
         ('Sorumi Ayam kampung', 2500, 'Mi Instan Rasa Ayam Kampung', 250),
         ('Sandal Zwallow', 9500, 'Sandal Kualitas Zuper', 20),
         ('Fintu', 10500, 'Minuman Soda Rasa Keju', 120),
